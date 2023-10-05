@@ -153,7 +153,7 @@ body::before {
 
 /* Estilos para telas */
 
-@media only screen and (min-width: 1025px) and (max-width: 1200px),
+@media only screen and (min-width: 1025px) and (max-width: 1200px)
     {
     .header-container {
         padding-left: 5%;
