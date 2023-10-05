@@ -15,4 +15,4 @@
 
 ## Informações Adicionais
 
-[Adicione aqui quaisquer informações adicionais que você acha que são importantes para os revisores entenderem as alterações.]
+[Adicione aqui quaisquer informações adicionais que você acha que são importantes para os revisores entenderem as alterações]
