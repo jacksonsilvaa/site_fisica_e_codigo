@@ -1,0 +1,230 @@
+/* styles.css (ou estilos internos no <style> do HTML) */
+
+/* Estilos padrão */
+.header-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Adicionado */
+    padding: 0 20%;
+}
+
+.header-container .circulo {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.header-container .circulo:before,
+.header-container .circulo:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.header-container .circulo:before {
+    top: -29px;
+    border-bottom: 29px solid #3498db;
+}
+
+.header-container .circulo:after {
+    bottom: -29px;
+    border-top: 29px solid #3498db;
+}
+
+.header-container h1 {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.menu-container {
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    white-space: nowrap;
+    margin-right: 20%;
+    font-size: 24px;
+}
+
+.menu-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-container li {
+    display: inline;    
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Estilos de hover (quando o mouse passa por cima do link) */
+.menu-container a:hover {
+    color: #555; /* Cor alterada para destacar o link */
+}
+
+/*Setando background*/
+
+body {
+    background-image: url('/backgrounds/coresale.jfif'); /* Substitua pelo caminho da sua imagem */
+    background-size:cover; /* Redimensiona a imagem para cobrir todo o corpo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Fixa o plano de fundo para que ele role com a página */
+    background-position: center center; /* Centraliza a imagem verticalmente e horizontalmente */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Para evitar barras de rolagem se a imagem for maior que a janela */
+}
+/* Adicione o pseudo-elemento ::before */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Herda o plano de fundo do corpo */
+    filter: blur(5px); /* Aplica um desfoque (ajuste o valor conforme desejado) */
+    z-index: -1; /* Coloca o pseudo-elemento abaixo do conteúdo do corpo */
+}
+
+
+/*cards*/
+
+/* styles.css */
+.container-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    width: 30%; /* Largura em porcentagem */
+    max-width: 200px;
+    height: 50%;
+    max-height: 280px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical do conteúdo */
+}
+
+.card-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: #ffffff;
+    max-height: 150px; /* Defina a altura máxima da imagem */
+    object-fit: cover; /* Para dimensionar a imagem de forma proporcional */
+}
+
+.card-container h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.card-container p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    overflow: hidden; /* Oculta qualquer texto que ultrapasse a altura máxima */
+    text-overflow: ellipsis; /* Adiciona reticências para indicar texto cortado */
+    max-height: 100px; /* Define a altura máxima para o conteúdo */
+}
+
+/*Responsividade*/
+
+/* Estilos para telas */
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px),
+    {
+    .header-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center; /* Centralize o conteúdo */
+    }
+    
+    .menu-container {
+        margin-right: 5%;
+        text-align: center; /* Centralize o conteúdo */
+    }
+
+    .card-container {
+        width: 30%; /* Largura dos cards */
+        max-width: 200px; /* Largura máxima de 200px */
+        height: auto; /* Altura automática para acomodar o conteúdo */
+        max-height: none; /* Remova a altura máxima */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Alinhamento vertical do conteúdo */
+    }
+    
+    .container-card {
+        overflow-x: scroll; /* Adicionar uma barra de rolagem horizontal se necessário */
+        display: flex;
+        flex-direction: column; /* Alinhe os cards verticalmente */
+        align-items: center; /* Alinhe os cards horizontalmente */
+    }
+}
+
+/* Estilos para smartphones */
+@media only screen and (max-width: 480px) {
+    .header-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        flex-direction: column; /* Adicionado */
+   }
+   
+   .menu-container {
+        margin-right: 5%;
+        position: static; /* Adicionado */
+        text-align: center; /* Adicionado */
+   }
+
+    .card-container {
+        width: 90%; /* Reduza ainda mais a largura dos cards */
+        max-width: none; /* Remova a largura máxima */
+        margin: 15px auto; /* Centralize os cards */
+    }
+    
+    .container-card {
+        overflow-x: scroll; /* Adicionar uma barra de rolagem horizontal se necessário */
+        display: flex;
+        flex-direction: column; /* Alinhe os cards verticalmente */
+        align-items: center; /* Alinhe os cards horizontalmente */
+    }
+}
+
+/*Rodapé*/
+
+.footer {
+    background-color: #2d275f; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto do rodapé */
+    text-align: center; /* Centralizar o texto horizontalmente */
+    padding: 20px; /* Espaçamento interno do rodapé */
+    position: absolute; /* Posição absoluta para fixar o rodapé na parte inferior da página */
+    width: 100%; /* Largura total do rodapé */
+    bottom: 0; /* Fixa o rodapé na parte inferior */
+}

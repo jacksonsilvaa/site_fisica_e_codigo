@@ -1,0 +1,200 @@
+/* Estilos para telas menores */
+@media only screen and (max-width: 600px) {
+    .header-container {
+         padding-left: 5%;
+         padding-right: 5%;
+    }
+    
+    .menu-container {
+         margin-right: 5%;
+    }
+
+    .card-container {
+        width: 30%; /* Largura dos cards */
+        max-width: 200px; /* Largura máxima de 200px */
+        height: 50%; /* Altura dos cards */
+        max-height: 280px; /* Altura máxima de 280px */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align:center;
+        display:flex;
+        flex-direction : column;/*Alinhamento vertical do conteúdo*/
+    }
+    
+    .container-card {
+        overflow-x: scroll; /* Adicionar uma barra de rolagem horizontal se necessário */
+        display: flex;
+        flex-direction: row; /* Alinhamento horizontal do conteúdo */
+    }
+}
+
+/* Estilos para smartphones */
+@media only screen and (max-width: 480px) {
+     .header-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        flex-direction: column; /* Adicionado */
+   }
+   
+   .menu-container {
+        margin-right: 5%;
+        position: static; /* Adicionado */
+        text-align: center; /* Adicionado */
+   }
+
+   .card-container {
+       width :30%;/*Largura dos cards*/
+       max-width :200px;/*Largura máxima de200px*/
+       height :50%;/*Altura dos cards*/
+       max-height :280px;/*Altura máxima de280px*/
+       border :1px solid #ccc;
+       border-radius :10px;
+       padding :10px;
+       margin :15px;
+       box-shadow :0 4px 6px rgba(0,0,0,0.1);
+       text-align:center;
+       display:flex;
+       flex-direction : column;/*Alinhamento vertical do conteúdo*/
+   }
+   
+   .container-card{
+       overflow-x : scroll;/*Adicionar uma barra de rolagem horizontal se necessário*/
+       display:flex;
+       flex-direction : row;/*Alinhamento horizontal do conteúdo*/
+   }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+     .header-container {
+        padding-left: 5%;
+        padding-right: 5%;
+   }
+   
+   .menu-container {
+        margin-right: 5%;
+   }
+
+   .card-container {
+       width :30%;/*Largura dos cards*/
+       max-width :200px;/*Largura máxima de200px*/
+       height :50%;/*Altura dos cards*/
+       max-height :280px;/*Altura máxima de280px*/
+       border :1px solid #ccc;
+       border-radius :10px;
+       padding :10px;
+       margin :15px;
+       box-shadow :0 4px 6px rgba(0,0,0,0.1);
+       text-align:center;
+       display:flex;
+       flex-direction : column;/*Alinhamento vertical do conteúdo*/
+   }
+   
+   .container-card{
+       overflow-x : scroll;/*Adicionar uma barra de rolagem horizontal se necessário*/
+       display:flex;
+       flex-direction : row;/*Alinhamento horizontal do conteúdo*/
+   }
+}
+  
+/* Estilos para pequenos desktops e laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+     .header-container{
+         padding-left :5%;
+         padding-right :5%;
+     }
+
+     .menu-container{
+         margin-right :5%;
+     }
+
+     .card-container{
+         width :30%;/*Largura dos cards*/
+         max-width :200px;/*Largura máxima de200px*/
+         height :50%;/*Altura dos cards*/
+         max-height :280px;/*Altura máxima de280px*/
+         border :1px solid #ccc;
+         border-radius :10px;
+         padding :10px;
+         margin :15px;
+         box-shadow :0 4px 6px rgba(0,0,0,0.1);
+         text-align:center;
+         display:flex;
+         flex-direction : column;/*Alinhamento vertical do conteúdo*/
+     }
+   
+     .container-card{
+         overflow-x : scroll;/*Adicionar uma barra de rolagem horizontal se necessário*/
+         display:flex;
+         flex-direction : row;/*Alinhamento horizontal do conteúdo*/
+     }
+}
+  
+/* Estilos para desktops grandes */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+     .header-container{
+         padding-left :5%;
+         padding-right :5%;
+     }
+
+     .menu-container{
+         margin-right :5%;
+     }
+
+     .card-container{
+         width :30%;/*Largura dos cards*/
+         max-width :200px;/*Largura máxima de200px*/
+         height :50%;/*Altura dos cards*/
+         max-height :280px;/*Altura máxima de280px*/
+         border :1px solid #ccc;
+         border-radius :10px;
+         padding :10px;
+         margin :15px;
+         box-shadow :0 4px 6px rgba(0,0,0,0.1);
+         text-align:center;
+         display:flex;
+         flex-direction : column;/*Alinhamento vertical do conteúdo*/
+     }
+   
+     .container-card{
+         overflow-x : scroll;/*Adicionar uma barra de rolagem horizontal se necessário*/
+         display:flex;
+         flex-direction : row;/*Alinhamento horizontal do conteúdo*/
+     }
+}
+  
+/* Estilos para desktops extra grandes */
+@media only screen and (min-width: 1201px) {
+     .header-container{
+         padding-left :5%;
+         padding-right :5%;
+     }
+
+     .menu-container{
+         margin-right :5%;
+     }
+
+     .card-container{
+         width :30%;/*Largura dos cards*/
+         max-width :200px;/*Largura máxima de200px*/
+         height :50%;/*Altura dos cards*/
+         max-height :280px;/*Altura máxima de280px*/
+         border :1px solid #ccc;
+         border-radius :10px;
+         padding :10px;
+         margin :15px;
+         box-shadow :0 4px 6px rgba(0,0,0,0.1);
+         text-align:center;
+         display:flex;
+         flex-direction : column;/*Alinhamento vertical do conteúdo*/
+     }
+   
+     .container-card{
+       overflow-x: scroll; /* Adicionar uma barra de rolagem horizontal se necessário */
+       display: flex;
+       flex-direction: row; /* Alinhamento horizontal do conteúdo */
+   }
+}
